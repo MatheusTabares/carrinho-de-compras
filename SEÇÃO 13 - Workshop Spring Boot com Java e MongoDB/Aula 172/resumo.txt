@@ -1,0 +1,7 @@
+DOIS PRINCIPAIS PONTOS QUE FIZERAM SURGIR OS BANCO DE DADOS NOSQL:
+
+*COMPATIBILIDADE DE IMPEDÂNCIA:
+Existe muito esforço computacional para converter sempre o que esta em memória, como um registro de solicitação de pedido que esta salvo como objetos que se relacionam, para o que esta em disco, que são linhas e tabelas. Isso causa perda de performance.
+
+*BANCO RELACIONAL NÃO FOI FEITO PRA CLUSTER:
+Aplicações com consideráveis volumes de dados, exemplo ponto frio, necessitam de potentes servidores para manter os dados, ou diversos computadores que formam um cluster. Se torna mais barato, mais confiável caso estrague um os outros funcionam, e mais performático, em relação a um único potente computador, para armazenar os dados. O problema é que os banco de dados relacionais não foram feitos para trabalhar em diversos computadores, pois suas tabelas são altamente acopladas e dependentes umas das outras. Isso foi a origem para a criação de banco de dados NOSQL.
