@@ -3,9 +3,10 @@ package com.matheuslopes.cursomc.reporitories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.matheuslopes.cursomc.domain.Estado;
+import com.matheuslopes.cursomc.domain.Categoria;
+import com.matheuslopes.cursomc.domain.Endereco;
 
 @Repository
-public interface EstadoRepository extends JpaRepository<Estado, Integer>{
+public interface EnderecoRepository extends JpaRepository<Endereco, Integer>{
 	
 }
