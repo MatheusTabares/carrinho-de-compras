@@ -3,8 +3,6 @@ package com.matheuslopes.cursomc.services;
 import java.util.List;
 import java.util.Optional;
 
-import javax.print.attribute.standard.PageRanges;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
@@ -13,7 +11,6 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.matheuslopes.cursomc.domain.Categoria;
-import com.matheuslopes.cursomc.domain.Cliente;
 import com.matheuslopes.cursomc.dto.CategoriaDTO;
 import com.matheuslopes.cursomc.reporitories.CategoriaRepository;
 import com.matheuslopes.cursomc.services.exceptions.DataIntegrityException;
