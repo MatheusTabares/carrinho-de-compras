@@ -14,7 +14,6 @@ import com.matheuslopes.cursomc.domain.enums.EstadoPagamento;
 import com.matheuslopes.cursomc.reporitories.ItemPedidoRepository;
 import com.matheuslopes.cursomc.reporitories.PagamentoRepository;
 import com.matheuslopes.cursomc.reporitories.PedidoRepository;
-import com.matheuslopes.cursomc.reporitories.ProdutoRepository;
 import com.matheuslopes.cursomc.services.exceptions.ObjectNotFoundException;
 
 @Service
@@ -30,7 +29,7 @@ public class PedidoService {
 	private PagamentoRepository pagamentoService; 
 	
 	@Autowired
-	private ProdutoRepository produtoRepository;
+	private ProdutoService produtoService;
 	
 	@Autowired
 	private ItemPedidoRepository itemPedidoRepository;
@@ -55,7 +54,7 @@ public class PedidoService {
 		pagamentoService.save(obj.getPagamento());
 		for(ItemPedido ip : obj.getItens()) {
 			ip.setDesconto(0.0);
-			ip.setPreco(produtoRepository.findById(ip.getProduto().getId()).get().getPreco());
+			ip.setPreco(produtoService.find(ip.getProduto().getId()).getPreco());
 			ip.setPedido(obj);
 		}
 		itemPedidoRepository.saveAll(obj.getItens());
