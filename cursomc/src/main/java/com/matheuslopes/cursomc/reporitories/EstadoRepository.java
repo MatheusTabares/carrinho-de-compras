@@ -12,6 +12,6 @@ import com.matheuslopes.cursomc.domain.Estado;
 public interface EstadoRepository extends JpaRepository<Estado, Integer>{
 	
 	@Transactional(readOnly = true)
-	List<Estado>  findAllByOrderByNome(String nome);
+	public List<Estado>  findAllByOrderByNome();
 	
 }

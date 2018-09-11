@@ -14,8 +14,8 @@ public class EstadoService {
 	@Autowired
 	private EstadoRepository estadoRepository;
 	
-	 public List<Estado> findAllByOrderByNome(String nome) {
-		 return estadoRepository.findAllByOrderByNome(nome);
+	 public List<Estado> findAllByOrderByNome() {
+		 return estadoRepository.findAllByOrderByNome();
 	 }
 	
 }
